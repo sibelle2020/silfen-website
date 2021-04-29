@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* HEADER --------------------------------------------------------------------------------->*/
+
+header {
+  display: block;
+}
+
+.banner {
+  width: 100%;
+  height: 25px;
+  background-color: lightblue;
+  font-size: 13px;
+  text-align: center;
+}
+
+.banner-text {
+  padding: 5px;
+  font-weight: 500;
+}
+
+.top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+
+.search-icon {
+  max-width: 25px;
+}
+
+.cart-icon {
+  max-width: 32px;
+}
+
+.silfen-play {
+  display: flex;
+  gap: 10px;
+}
+
+.text-arrow-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.silfen-play-logo {
+  max-width: 25px;
+}
+
+.explore-silfen-play {
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  max-width: 25px;
+  animation-name: arrow-move;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logo-img {
+  max-width: 180px;
+  padding-top: 5px;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-items {
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
