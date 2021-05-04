@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products";
+
 function getdata() {
   fetch("https://s21kea-d06b.restdb.io/rest/silfen-products", {
     method: "GET",
@@ -15,21 +18,7 @@ function getdata() {
 }
 getdata();
 
-function showProducts(bags) {
-  console.log(bags);
-  //grab the template
-  //const template = document.querySelector("").content;
-
-  posts.forEach((bags) => {
-    console.log(bags);
-
-    //clone
-    //const copy = template.cloneNode(true);
-
-    //adjust stuff
-
-    //if (copy.sale) {
-    //append
-    //}
-  });
+function showProducts(data) {
+  console.log(data);
+  data.forEach(allBags);
 }
