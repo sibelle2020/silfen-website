@@ -7,7 +7,7 @@ function getdata() {
   })
     .then((res) => res.json())
     .then((response) => {
-      showBestsellers(response);
+      showBCategory(response);
     })
     .catch((err) => {
       console.error(err);
