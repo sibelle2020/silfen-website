@@ -1,25 +1,13 @@
-const searchParams = new URLSearchParams(window.location.search);
-const productId = searchParams.get("product");
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const url = "https://s21kea-d06b.restdb.io/rest/silfen-products" + id;
 
-fetch(
-  "https://s21kea-d06b.restdb.io/rest/silfen-products" +
-    productId +
-    "?fetchchildren=true",
-  {
-    method: "GET",
-    headers: {
-      "x-apikey": "6033bd605ad3610fb5bb64f6",
-    },
-  }
-)
+const options = {
+  headers: {
+    "x-apikey": "6033bd605ad3610fb5bb64f6",
+  },
+};
+
+fetch(url, options)
   .then((res) => res.json())
-  .then((response) => {
-    showProduct(response);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
-function showProduct(data) {
-  console.log(data);
-}
+  .then((data) => showBag(data));

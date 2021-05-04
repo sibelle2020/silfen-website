@@ -1,24 +1,28 @@
 const urlParams = new URLSearchParams(window.location.search);
 let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products";
+const type = urlParams.get("type");
 
-function getdata() {
-  fetch("https://s21kea-d06b.restdb.io/rest/silfen-products", {
-    method: "GET",
-    headers: {
-      "x-apikey": "6033bd605ad3610fb5bb64f6",
-    },
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      showProducts(response);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+if (type) {
+  console.log(type);
+  urlall = urlall + `?q={"type":{"$elemMatch":"${type}"}}`;
 }
-getdata();
 
-function showProducts(data) {
+const options = {
+  headers: {
+    "x-apikey": "6033bd605ad3610fb5bb64f6",
+  },
+};
+
+fetch(urlall, options)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    allBags(data);
+  });
+
+function allBags(data) {
   console.log(data);
-  data.forEach(allBags);
+  data.forEach(showBags);
 }

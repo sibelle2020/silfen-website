@@ -1,16 +1,23 @@
-function getdata() {
-  fetch("https://s21kea-d06b.restdb.io/rest/silfen-products", {
-    method: "GET",
-    headers: {
-      "x-apikey": "6033bd605ad3610fb5bb64f6",
-    },
+const urlParams = new URLSearchParams(window.location.search);
+let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products";
+
+const options = {
+  method: "GET",
+  headers: {
+    "x-apikey": "6033bd605ad3610fb5bb64f6",
+  },
+};
+
+fetch(urlall, options)
+  .then(function (res) {
+    return res.json();
   })
-    .then((res) => res.json())
-    .then((response) => {
-      showBCategory(response);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  .then(function (data) {
+    console.log(data);
+    allBags(data);
+  });
+
+function allBags(data) {
+  console.log(data);
+  data.forEach(showBags);
 }
-getdata();
