@@ -141,6 +141,7 @@ header {
   font-family: inherit;
   margin: 0;
   background: none;
+  cursor: pointer;
 }
 
 .dropdown2 .dropbtn2 {
@@ -154,6 +155,7 @@ header {
   font-family: inherit;
   margin: 0;
   background: none;
+  cursor: pointer;
 }
 
 .dropdown-content {
