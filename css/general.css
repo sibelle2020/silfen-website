@@ -473,9 +473,101 @@ header {
   padding: 30px;
 }
 
+/* FOOTER STYLING ------------------------------------------------*/
+
+.newsletter {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+.newsletter-items {
+  width: 500px;
+  text-align: center;
+}
+
+.newsletter img {
+  max-width: 200px;
+  padding-bottom: 10px;
+}
+.newsletter p {
+  padding-bottom: 15px;
+}
+
+.newsletter a {
+  text-decoration: underline;
+  color: black;
+  font-family: degular-display, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.newsletter a:hover {
+  color: #d8d6f2;
+}
+
+.footer-section {
+  height: 50vh;
+  width: 100%;
+  background: #e2e0dc;
+  display: flex;
+  justify-content: space-between;
+  padding: 5vw;
+  padding-top: 5vw;
+}
+
+.cards {
+  max-width: 300px;
+  padding-top: 20px;
+}
+
+.bottom-logo {
+  transform: translateX(-1vw);
+}
+
+.footer-nav {
+  display: flex;
+  width: 40vw;
+  gap: 80px;
+}
+
+.footer-info p {
+  padding-bottom: 10px;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-wrapper h4 {
+  color: gray;
+  padding-bottom: 20px;
+}
+
+.nav-wrapper a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 10px;
+}
+
+.nav-wrapper a:hover {
+  color: gray;
+}
+
+/* MEADIA QUERIES --------------------------*/
 @media (max-width: 1000px) {
   .collections img {
     max-width: 100%;
+  }
+
+  .footer-nav {
+    width: 100%;
+    gap: 40px;
+    padding-top: 20px;
   }
 
   .manifesto img {
@@ -535,5 +627,10 @@ header {
     font-size: 5.5rem;
     top: 60vw;
     left: 33vw;
+  }
+
+  .footer-section {
+    flex-direction: column-reverse;
+    height: 80vh;
   }
 }
