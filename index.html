@@ -113,7 +113,38 @@
         </div>
       </nav>
     </header>
-    <main></main>
+
+    <main class="front-main">
+      <section class="introduction"></section>
+      <section class="bestsellers">
+        <div class="best-wrapper">
+          <a href="productlist.html?type=bestsellers" class="best-link"
+            >shop best sellers</a
+          >
+          <div class="bags-wrapper-best"></div>
+        </div>
+      </section>
+      <div class="collections">
+        <img src="img/collections-section.svg" alt="collections" />
+      </div>
+      <div class="manifesto">
+        <img src="img/manifesto-section.svg" alt="manifesto" />
+      </div>
+      <div class="instagram">
+        <img src="img/silfen-instagram.svg" alt="instagram" />
+      </div>
+
+      <template id="best-template">
+        <a href="" class="link-to-best">
+          <div class="image-container-best">
+            <img src="" alt="silfenstudio.com" />
+          </div>
+          <h2 class="bag-name-best"></h2>
+          <p class="bag-price-best"></p>
+        </a>
+      </template>
+    </main>
+
     <footer></footer>
 
     <script src="js/index.js"></script>
