@@ -246,6 +246,138 @@ header {
 
 /* FRONT PAGE-------------------------------------------------------*/
 
+.introduction {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-images {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  padding-top: 60px;
+}
+
+.left-image {
+  background-image: url(../img/blue-bag-air.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30vw;
+  height: 30vw;
+  animation-name: left-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-in {
+  0% {
+    transform: translateX(-50vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.right-image {
+  background-image: url(../img/silfen-brown-bag.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 42vw;
+  height: 42vw;
+  animation-name: right-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes right-in {
+  0% {
+    transform: translateX(55vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.top-line {
+  position: absolute;
+  font-family: degular-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8rem;
+  z-index: 1;
+  top: 6vw;
+  left: 4vw;
+  animation-name: top-in;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-in {
+  0% {
+    transform: translateY(50vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.top-line2 {
+  position: absolute;
+  position: absolute;
+  font-family: degular-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8rem;
+  z-index: 1;
+  top: 15vw;
+  left: 4vw;
+  animation-name: top-in2;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-in2 {
+  0% {
+    transform: translateY(60vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.top-line3 {
+  position: absolute;
+  position: absolute;
+  font-family: degular-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8rem;
+  z-index: 1;
+  top: 24vw;
+  left: 4vw;
+  animation-name: top-in3;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-in3 {
+  0% {
+    transform: translateY(70vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .bestsellers {
   width: 100%;
   background-color: #bed8c0;
@@ -369,5 +501,39 @@ header {
   .bestsellers a {
     padding-top: 5vw;
     padding-bottom: 5vw;
+  }
+  .top-images {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .introduction {
+    height: 90vh;
+  }
+
+  .left-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .right-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .top-line {
+    font-size: 5.5rem;
+    top: 20vw;
+    left: 20vw;
+  }
+  .top-line2 {
+    font-size: 5.5rem;
+    top: 40vw;
+    left: 53vw;
+  }
+  .top-line3 {
+    font-size: 5.5rem;
+    top: 60vw;
+    left: 33vw;
   }
 }
