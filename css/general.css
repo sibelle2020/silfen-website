@@ -124,10 +124,12 @@ header {
 
 .dropdown {
   overflow: hidden;
+  z-index: 2;
 }
 
 .dropdown2 {
   overflow: hidden;
+  z-index: 2;
 }
 
 .dropdown .dropbtn {
