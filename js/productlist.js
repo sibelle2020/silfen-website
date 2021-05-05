@@ -38,6 +38,14 @@ function showBags(bag) {
   copy.querySelector(".bag-name").textContent = bag.name;
   copy.querySelector(".bag-price").textContent = `${bag.price} DKK`;
 
+  if (bag.sale) {
+    copy.querySelector(".sale").classList.remove("hidden");
+    copy.querySelector(".sale-price").textContent = `${
+      bag.price - (bag.sale / 100) * bag.price
+    } DKK`;
+    copy.querySelector(".bag-price").classList.add("line-through");
+  }
+
   if (type) {
     document.querySelector("h1").textContent = type;
   }
