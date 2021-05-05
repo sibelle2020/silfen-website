@@ -147,7 +147,7 @@
 .recommendations {
   width: 100%;
   background-color: #bed8c0;
-  height: 80vh;
+  height: 90vh;
 }
 
 .rec-wrapper {
@@ -156,13 +156,52 @@
   max-width: 100%;
 }
 
+.link-to-recommend {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
 .recommendations .recommend-title {
   font-family: degular-display, sans-serif;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
   font-size: 2.2rem;
-  padding-top: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 2vw;
+  text-align: center;
+}
+
+.recommendations h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: degular-display, sans-serif;
+  font-style: normal;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.recommendations p {
+  font-size: 0.9rem;
+}
+
+.recommendations img {
+  max-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations img:hover {
+  transform: scale(1.05);
+}
+
+.bags-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 250px));
+  gap: 30px;
+  max-width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 1000px) {
@@ -191,5 +230,22 @@
   }
   .color-squares .color-img {
     max-width: 25px;
+  }
+
+  .bags-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(auto, 300px));
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+  }
+  .recommendations img {
+    max-width: 300px;
+  }
+  .recommendations {
+    height: 325vh;
+  }
+  .recommendations .recommend-title {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
   }
 }

@@ -1,10 +1,13 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 const url =
-  "https://s21kea-d06b.restdb.io/rest/silfen-products/608d539b22a6f4340013b6a9" +
+  "https://s21kea-d06b.restdb.io/rest/silfen-products/" +
+  id +
   "?fetchchildren=true";
 const urlrec =
-  "https://s21kea-d06b.restdb.io/rest/silfen-products?type=bestseller&max=3";
+  "https://s21kea-d06b.restdb.io/rest/silfen-products?sort=name" +
+  `&q={"type":"bestsellers"}` +
+  "&max=4";
 
 const options = {
   headers: {
@@ -60,4 +63,17 @@ function showBag(bag) {
 
 function showRec(data) {
   data.forEach(recList);
+}
+
+function recList(rec) {
+  const rectemplate = document.querySelector("#recommended-template").content;
+  const clone = rectemplate.cloneNode(true);
+
+  clone.querySelector("img").src = rec.imgmodel;
+  clone.querySelector("h2").textContent = rec.name;
+  clone.querySelector("p").textContent = `${rec.price} DKK`;
+  clone.querySelector(".link-to-recommend").href = `product.html?id=${rec._id}`;
+
+  const parent = document.querySelector(".bags-wrapper");
+  parent.appendChild(clone);
 }
