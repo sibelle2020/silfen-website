@@ -1,0 +1,19 @@
+.product-info-wrapper {
+  display: flex;
+}
+
+.product-images {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .product-info-wrapper {
+    flex-direction: column;
+  }
+  .product-images {
+    flex-direction: column;
+  }
+  .extra-img-container {
+    display: flex;
+  }
+}

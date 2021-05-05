@@ -46,6 +46,16 @@ function showBag(bag) {
 
     document.querySelector(".color-squares").appendChild(baby);
   });
+
+  const template3 = document.querySelector("#extra-img-template").content;
+
+  bag.images.forEach((images) => {
+    const extra = template3.cloneNode(true);
+
+    extra.querySelector(".extra-img").src = images.image;
+
+    document.querySelector(".extra-img-container").appendChild(extra);
+  });
 }
 
 function showRec(data) {
