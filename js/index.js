@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products";
+let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products?sort=name";
 
 const options = {
   method: "GET",

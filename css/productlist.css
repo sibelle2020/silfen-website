@@ -189,3 +189,21 @@ main {
 .show {
   display: block;
 }
+
+/*ALL BAGS GRID -----------------------*/
+
+.template-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  padding: 45px;
+}
+
+.image-container {
+  box-shadow: rgb(213, 210, 208) 5px 5px 15px, rgb(255, 255, 255) -5px -5px 15px;
+  width: 300px;
+  height: 451px;
+}
+
+.image-container img {
+  max-width: 300px;
+}

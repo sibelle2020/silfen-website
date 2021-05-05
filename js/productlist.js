@@ -1,10 +1,10 @@
 const urlParams = new URLSearchParams(window.location.search);
-let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products";
+let urlall = "https://s21kea-d06b.restdb.io/rest/silfen-products?sort=name";
 const type = urlParams.get("type");
 
 if (type) {
   console.log(type);
-  urlall = urlall + `?q={"type":{"$elemMatch":"${type}"}}`;
+  urlall = urlall + `&q={"type":{"$elemMatch":"${type}"}}`;
 }
 
 const options = {
@@ -25,6 +25,23 @@ fetch(urlall, options)
 function allBags(data) {
   console.log(data);
   data.forEach(showBags);
+}
+
+function showBags(bag) {
+  const template = document.querySelector("#product-list-template").content;
+  const copy = template.cloneNode(true);
+
+  copy.querySelector(".link-to-product").href = `product.html?id=${bag._id}`;
+  copy.querySelector("img").src = bag.imgmodel;
+  copy.querySelector(".bag-name").textContent = bag.name;
+  copy.querySelector(".bag-price").textContent = `${bag.price} DKK`;
+
+  if (type) {
+    document.querySelector("h1").textContent = type;
+  }
+
+  const parent = document.querySelector(".template-container");
+  parent.appendChild(copy);
 }
 
 function myFunction() {
