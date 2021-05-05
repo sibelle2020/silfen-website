@@ -8,6 +8,7 @@
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/productlist.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/dwg6lvp.css" />
   </head>
   <body>
     <header>
@@ -115,14 +116,14 @@
     </header>
 
     <main>
-      <h1>All Bags</h1>
+      <h1 class="bag-headline">All Bags</h1>
       <div class="filter-buttons-containter">
         <div class="filter-dropdown-category">
           <button onclick="myFunction()" class="filter-dropbtn-category">
             <p>CATEGORIES</p>
             <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
           </button>
-          <div id="myDropdown" class="dropdown-content-category">
+          <div id="catDropdown" class="dropdown-content-category">
             <a href="productlist.html">view all</a>
             <a href="productlist.html?type=new-arrivals">new arrivals</a>
             <a href="productlist.html?type=bestsellers">best sellers</a>
@@ -137,11 +138,11 @@
           </div>
         </div>
         <div class="filter-dropdown-colors">
-          <button onclick="myFunction()" class="filter-dropbtn-colors">
+          <button onclick="myFunction2()" class="filter-dropbtn-colors">
             <p>COLORS</p>
             <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
           </button>
-          <div id="myDropdown2" class="dropdown-content-colors">
+          <div id="colorDropdown" class="dropdown-content-colors">
             <a href="productlist.html?sort-colors=white">white</a>
             <a href="productlist.html?sort-colors=black">black</a>
             <a href="productlist.html?sort-colors=grey">grey</a>
@@ -155,11 +156,11 @@
           </div>
         </div>
         <div class="filter-dropdown-price">
-          <button onclick="myFunction()" class="filter-dropbtn-price">
+          <button onclick="myFunction3()" class="filter-dropbtn-price">
             <p>PRICE</p>
             <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
           </button>
-          <div id="myDropdown3" class="dropdown-content-price">
+          <div id="priceDropdown" class="dropdown-content-price">
             <a href="productlist.html?sort=price">low to high</a>
             <a href="productlist.html?sort=price&dir=-1">high to low</a>
           </div>

@@ -1,8 +1,24 @@
+main {
+  margin: 2.5vw;
+}
+
+.bag-headline {
+  padding-top: 20px;
+  padding-left: 45px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: degular-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* FILTER BUTTONS ------------------------------*/
 
 .filter-buttons-containter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 25px;
+  padding-top: 15px;
 }
 
 /* category filter*/
@@ -59,6 +75,14 @@
 }
 
 .show {
+  display: block;
+}
+
+.show2 {
+  display: block;
+}
+
+.show3 {
   display: block;
 }
 
