@@ -7,29 +7,161 @@
     <title>SILFEN - Welcome to our universe!</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
     <link rel="stylesheet" href="https://use.typekit.net/dwg6lvp.css" />
+    <link rel="stylesheet" href="css/general.css" />
   </head>
   <body>
     <header>
       <div class="banner">
-        <p class="banner-text"></p>
+        <p class="banner-text">
+          Subscribe to our newsletter and get 10% discount on your first order!
+        </p>
       </div>
-      <div class="icons-nav">
-        <div class="cart-search"></div>
-        <nav class="top-nav">
-          <div class="top-logo">
-            <a href=""><img src="" alt="" class="logo-img" /></a>
+
+      <div class="top-icons">
+        <div class="silfen-play">
+          <img
+            src="img/silfen-play-icon-grey.svg"
+            alt="grey silfen play logo"
+            class="silfen-play-logo"
+          />
+          <div class="text-arrow-wrapper">
+            <p class="explore-silfen-play">Explore Silfen Play</p>
+            <img
+              src="img/silfen-play-arrow.png"
+              alt="grey arrow"
+              class="arrow"
+            />
           </div>
-          <ul class="nav-list">
-            <li class="nav-items"><a href="" class="nav-link"></a></li>
-            <li class="nav-items"><a href="" class="nav-link"></a></li>
-            <li class="nav-items"><a href="" class="nav-link"></a></li>
-            <li class="nav-items"><a href="" class="nav-link"></a></li>
-            <li class="nav-items"><a href="" class="nav-link"></a></li>
-          </ul>
-        </nav>
+        </div>
+        <div class="cart-search-wrapper">
+          <img
+            src="img/search-icon-silfen.png"
+            alt="black search icon"
+            class="search-icon"
+          />
+          <img
+            src="img/cart-icon-silfen.png"
+            alt="black shopping cart icon"
+            class="cart-icon"
+          />
+        </div>
       </div>
+
+      <nav class="top-nav">
+        <a href="index.html" class="logo-link"
+          ><img
+            src="img/sortlogo.png"
+            alt="silfen logo in black"
+            class="logo-img"
+        /></a>
+        <div class="nav-list">
+          <div class="dropdown">
+            <button class="dropbtn">
+              shop
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div class="menu-row">
+                <div class="shop-by">
+                  <h3 class="shop-category">shop by category</h3>
+                  <a href="productlist.html">view all</a>
+                  <a href="productlist.html?type=new-arrivals">new arrivals</a>
+                  <a href="productlist.html?type=bestsellers">best sellers</a>
+                  <a href="productlist.html?type=sale">sale</a>
+                  <a href="productlist.html?type=bumbags">bumbags</a>
+                  <a href="productlist.html?type=shoulder-bags"
+                    >shoulder bags</a
+                  >
+                  <a href="productlist.html?type=crossbody-bags"
+                    >crossbody bags</a
+                  >
+                  <a href="productlist.html?type=tote-bags">tote bags</a>
+                  <a href="productlist.html?type=mini-bags">mini bags</a>
+                  <a href="productlist.html?type=wallets">wallets</a>
+                  <a href="productlist.html?type=care-products"
+                    >care products</a
+                  >
+                </div>
+                <div class="shop-by">
+                  <h3 class="shop-collection">shop by collection</h3>
+                  <a href="#">classics</a>
+                  <a href="#">recycle</a>
+                  <a href="#">snow queen</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nav-link">sustainability</a>
+          <a href="#" class="nav-link">manifesto</a>
+          <div class="dropdown2">
+            <button class="dropbtn2">
+              support
+              <i class="fa fa-caret-down2"></i>
+            </button>
+            <div class="dropdown-content2">
+              <div class="menu-row2">
+                <div class="support-links">
+                  <a href="#">contact</a>
+                  <a href="#">terms & conditions</a>
+                  <a href="#">orders & returns</a>
+                  <a href="#">privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nav-link">about</a>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="product-info-wrapper">
+        <section class="product-info">
+          <h1 class="bag-title"></h1>
+          <h2 class="bag-price-title"></h2>
+          <p class="bag-description"></p>
+          <div class="color-squares"></div>
+          <div class="buttons-container">
+            <button class="addcart"></button>
+            <button class="buynow"></button>
+          </div>
+          <div class="details-container">
+            <div class="detail-wrapper">
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="detail-wrapper">
+              <h3></h3>
+              <p></p>
+            </div>
+            <div class="detail-wrapper">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+        </section>
+
+        <div class="product-images">
+          <img src="" alt="silfenstudio.com" class="main-img" />
+          <div class="extra-img-container"></div>
+        </div>
+      </div>
+
+      <section class="recommendations">
+        <h1 class="recommend-title">recommended for you</h1>
+        <div class="bags-wrapper"></div>
+      </section>
+
+      <template id="recommended-template">
+        <a href="" class="link-to-recommend">
+          <div class="image-container">
+            <img src="" alt="silfenstudio.com" />
+          </div>
+          <h2 class="bag-name"></h2>
+          <p class="bag-price"></p>
+        </a>
+      </template>
+    </main>
+
     <footer></footer>
 
     <script src="js/product.js"></script>
