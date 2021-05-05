@@ -7,6 +7,7 @@
     <title>SILFEN - Welcome to our universe!</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
   </head>
   <body>
     <header>
@@ -115,14 +116,68 @@
 
     <main>
       <h1>All Bags</h1>
-      <div class="filter-buttons-containter"></div>
+      <div class="filter-buttons-containter">
+        <div class="filter-dropdown-category">
+          <button onclick="myFunction()" class="filter-dropbtn-category">
+            <p>CATEGORIES</p>
+            <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
+          </button>
+          <div id="myDropdown" class="dropdown-content-category">
+            <a href="productlist.html">view all</a>
+            <a href="productlist.html?type=new-arrivals">new arrivals</a>
+            <a href="productlist.html?type=bestsellers">best sellers</a>
+            <a href="productlist.html?type=sale">sale</a>
+            <a href="productlist.html?type=bumbags">bumbags</a>
+            <a href="productlist.html?type=shoulder-bags">shoulder bags</a>
+            <a href="productlist.html?type=crossbody-bags">crossbody bags</a>
+            <a href="productlist.html?type=tote-bags">tote bags</a>
+            <a href="productlist.html?type=mini-bags">mini bags</a>
+            <a href="productlist.html?type=wallets">wallets</a>
+            <a href="productlist.html?type=care-products">care products</a>
+          </div>
+        </div>
+        <div class="filter-dropdown-colors">
+          <button onclick="myFunction()" class="filter-dropbtn-colors">
+            <p>COLORS</p>
+            <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
+          </button>
+          <div id="myDropdown2" class="dropdown-content-colors">
+            <a href="productlist.html?sort-colors=white">white</a>
+            <a href="productlist.html?sort-colors=black">black</a>
+            <a href="productlist.html?sort-colors=grey">grey</a>
+            <a href="productlist.html?sort-colors=pink">pink</a>
+            <a href="productlist.html?sort-colors=purple">purple</a>
+            <a href="productlist.html?sort-colors=brown">brown</a>
+            <a href="productlist.html?sort-colors=yellow">yellow</a>
+            <a href="productlist.html?sort-colors=blue">blue</a>
+            <a href="productlist.html?sort-colors=green">green</a>
+            <a href="productlist.html?sort-colors=beige">beige</a>
+          </div>
+        </div>
+        <div class="filter-dropdown-price">
+          <button onclick="myFunction()" class="filter-dropbtn-price">
+            <p>PRICE</p>
+            <img src="img/drop-arrow.svg" alt="down arrow" class="down-arrow" />
+          </button>
+          <div id="myDropdown3" class="dropdown-content-price">
+            <a href="productlist.html?sort=price">low to high</a>
+            <a href="productlist.html?sort=price&dir=-1">high to low</a>
+          </div>
+        </div>
+      </div>
       <div class="template-container"></div>
 
       <template id="product-list-template">
-        <img src="" alt="silfenstudio.com" />
-        <div class="color-squares"></div>
-        <h2 class="bag-name"></h2>
-        <p class="bag-price"></p>
+        <a href="" class="link-to-product">
+          <div class="image-container">
+            <img src="" alt="silfenstudio.com" />
+            <div class="sale"></div>
+          </div>
+          <div class="color-squares"></div>
+          <h2 class="bag-name"></h2>
+          <p class="bag-price"></p>
+          <p class="sale-price"></p>
+        </a>
       </template>
 
       <template id="colors-template">
